@@ -1,0 +1,87 @@
+# MCDiscordBridge - Default Configuration
+webhook:
+  url: "https://discord.com/api/webhooks/1476335872466227310/NdpdXYHpC9ZgtI48UoaZJib4UbFnyrSr2aZ_jyXhc7RytryKRQOpM6kgBlUT9UTgbiG9"
+  username: "Minecraft Sunucu"
+  avatar-url: ""
+server:
+  name: "My Awesome 1.8 Server"
+  icon-url: ""
+events:
+  enabled:
+    - chat
+    - join
+    - quit
+    - kick
+    - death
+    - achievement
+    - player_command
+    - console_command
+    - block_break
+    - block_place
+    - server_start
+    - server_stop
+  chat:
+    enabled: true
+    use-embed: true
+    color: "#00FF00"
+    ignore-commands: true
+    format: "{player}: {message}"
+  join:
+    enabled: true
+    use-embed: true
+    color: "#3498db"
+    format: ":arrow_right: {player} sunucuya katıldı."
+  quit:
+    enabled: true
+    use-embed: true
+    color: "#e67e22"
+    format: ":arrow_left: {player} sunucudan ayrıldı."
+  kick:
+    enabled: true
+    use-embed: true
+    color: "#e74c3c"
+    format: ":no_entry: {player} atıldı. Sebep: {reason}"
+  death:
+    enabled: true
+    use-embed: true
+    color: "#c0392b"
+    show-coordinates: true
+    show-cause: true
+    show-killer: true
+    format: "{player} öldü: {death_message}"
+  achievement:
+    enabled: true
+    use-embed: true
+    color: "#f1c40f"
+    show-description: true
+    format: ":trophy: {player} başarı kazandı: {achievement}"
+  player_command:
+    enabled: true
+    use-embed: true
+    color: "#8e44ad"
+    format: ":keyboard: {player} komut kullandı: {command}"
+  console_command:
+    enabled: true
+    use-embed: true
+    color: "#2ecc71"
+    format: ":keyboard: Konsol komutu: {command}"
+  block_break:
+    enabled: true
+    use-embed: true
+    color: "#16a085"
+    format: ":pick: {player} blok kırdı: {block} ({location})"
+  block_place:
+    enabled: true
+    use-embed: true
+    color: "#27ae60"
+    format: ":bricks: {player} blok koydu: {block} ({location})"
+  server_start:
+    enabled: true
+    use-embed: true
+    color: "#2980b9"
+    format: ":white_check_mark: Sunucu başlatıldı."
+  server_stop:
+    enabled: true
+    use-embed: true
+    color: "#34495e"
+    format: ":octagonal_sign: Sunucu kapatıldı."
