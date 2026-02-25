@@ -3,7 +3,7 @@ main: sex.yakut.mcdiscordbridge.MCDiscordBridge
 version: 1.0.0
 api-version: 1.8
 author: yakut
-description: Minecraft 1.8.8 → Discord Webhook Bridge
+description: Minecraft → Discord Webhook Bridge
 commands:
   mdb:
     description: MCDiscordBridge komutları

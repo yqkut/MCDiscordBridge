@@ -43,4 +43,4 @@ mvn clean package
 - MIT Lisansı ile dağıtılır.
 
 ## İletişim
-- Sorularınız için: [GitHub Issues](https://github.com/yakut/MCDiscordBridge/issues)
+- Sorularınız için: [GitHub Issues](https://github.com/yqkut/MCDiscordBridge/issues)
