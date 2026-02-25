@@ -1,6 +1,6 @@
 # MCDiscordBridge - Default Configuration
 webhook:
-  url: "https://discord.com/api/webhooks/1476335872466227310/NdpdXYHpC9ZgtI48UoaZJib4UbFnyrSr2aZ_jyXhc7RytryKRQOpM6kgBlUT9UTgbiG9"
+  url: ""
   username: "Minecraft Sunucu"
   avatar-url: ""
 server:
