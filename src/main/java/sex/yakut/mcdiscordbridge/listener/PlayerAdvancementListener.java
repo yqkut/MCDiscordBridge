@@ -1,7 +1,8 @@
 package sex.yakut.mcdiscordbridge.listener;
 
+import org.bukkit.Achievement;
 import org.bukkit.event.EventHandler;
-import org.bukkit.event.player.PlayerAdvancementDoneEvent;
+import org.bukkit.event.player.PlayerAchievementAwardedEvent;
 import sex.yakut.mcdiscordbridge.config.ConfigManager;
 import sex.yakut.mcdiscordbridge.config.PluginConfig;
 import sex.yakut.mcdiscordbridge.webhook.WebhookSender;
@@ -14,13 +15,13 @@ public class PlayerAdvancementListener extends BaseEventListener {
     }
 
     @EventHandler
-    public void onPlayerAdvancement(PlayerAdvancementDoneEvent event) {
+    public void onPlayerAchievement(PlayerAchievementAwardedEvent event) {
         PluginConfig.AchievementEventConfig achCfg = (PluginConfig.AchievementEventConfig) configManager.getPluginConfig().events.achievement;
         if (!achCfg.enabled) return;
-        String advancementKey = event.getAdvancement().getKey().getKey();
-        String formatted = MessageFormatter.formatAchievement(event.getPlayer(), advancementKey, achCfg.format, achCfg.showDescription);
+        Achievement achievement = event.getAchievement();
+        String formatted = MessageFormatter.formatAchievement(event.getPlayer(), achievement, achCfg.format, achCfg.showDescription);
         if (achCfg.useEmbed) {
-            webhookSender.sendAsync(EmbedFormatter.formatAdvancementEmbed(event.getPlayer(), advancementKey, achCfg));
+            webhookSender.sendAsync(EmbedFormatter.formatAchievementEmbed(event.getPlayer(), achievement, achCfg));
         } else {
             webhookSender.sendAsync(MessageFormatter.toJson(formatted));
         }
